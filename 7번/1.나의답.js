@@ -22,3 +22,18 @@ function solution(absolutes, signs) {
 
     return absolutes.reduce((acc, val, i) => acc + (val * (signs[i] ? 1 : -1)), 0);
 }
+
+
+function solution(absolutes, signs) {
+  var c = 0
+  for( i = 0 ; i < absolutes.length; i++){  
+     var si = signs[i] == true ? 1 : -1;
+     // if (signs[i] == true){
+     //     var si = 1
+     // }else{
+     //     var si = -1
+     // }
+     result = absolutes[i]*si
+     c += result
+     }   
+  return c
