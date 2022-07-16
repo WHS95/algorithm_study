@@ -1,0 +1,10 @@
+
+
+js 메소드
+Join
+Temp
+map
+filiter
+foreach
+
+
