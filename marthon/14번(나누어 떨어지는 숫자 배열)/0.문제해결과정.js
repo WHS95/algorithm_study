@@ -35,7 +35,6 @@ for (i = 0; i < arr.length; i++) {
   //result 배열에 인덱스가 아무것도 없을때 length는 0이므로
   //0일경우 -1배열값을 넣어준다.
 }
-
 result.sort((a, b) => a - b);
 
 console.log(result);

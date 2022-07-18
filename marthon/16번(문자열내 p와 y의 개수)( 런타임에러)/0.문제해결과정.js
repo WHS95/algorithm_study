@@ -43,8 +43,8 @@ let pl = p.length
 let yl = y.length
 
 //if문을 통해서 글자길이가 같으면 true/ 아니면 false
-if(pl === yl){
-    console.log(true)
-}else{
-    console.log(false)
-}
+// if(pl === yl){
+//     console.log(true)
+// }else{
+//     console.log(false)
+// }

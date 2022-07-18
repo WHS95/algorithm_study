@@ -3,22 +3,23 @@
 
 
 //1번째 문제 풀이
-let s = "pPpoooyY";
+// let s = "pPoooyY";
 
-function solution(s) {
+// function solution(s) {pp
 
-    let d = s.toLowerCase(); // 소문자로 변환;
-    let pl = d.match(/p/g).length; //p의 갯수 가져오기
-    let yl = d.match(/y/g).length; //y의 갯수 가져오기
+//     let d = s.toLowerCase(); // 소문자로 변환;
+//     let pl = d.match(/p/g).length; //p의 갯수 가져오기
+//     let yl = d.match(/y/g).length; //y의 갯수 가져오기
   
-    result = pl === yl ? true : false;
-    //p,y의 갯수 비교 값 출력
-    return result;
-  }
-런타임오류 발생.....
+//     result = pl === yl ? true : false;
+//     //p,y의 갯수 비교 값 출력
+//     return result;
+//   }
+// 런타임오류 발생.....
   
 
 //2번째 문제 풀이
+let s = "pPoooyY";
     let change = s.toLowerCase();
     let check_p = change.split("p").length;
     let check_y = change.split("y").length;
@@ -26,9 +27,8 @@ function solution(s) {
    result = check_p == check_y ? true : false;
 
 
-      console.log(change.split("p"));
-
-
+  console.log(change.split("p"));
+ 
 
 //모법예시
 //논리연산자를 바로 구현해서 return값에 전달
