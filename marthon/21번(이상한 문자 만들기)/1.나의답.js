@@ -17,7 +17,6 @@ const solution = (s) => {
           if(i%2 === 0) temp += w[i].toUpperCase();
           if(i%2 !== 0) temp += w[i].toLowerCase();
       }
-
       return temp;
   })
 

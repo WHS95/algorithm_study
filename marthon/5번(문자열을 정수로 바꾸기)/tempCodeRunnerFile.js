@@ -1,0 +1,1 @@
+log(num4 + ', ' + typeof num4);

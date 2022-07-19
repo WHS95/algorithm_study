@@ -5,7 +5,7 @@
 //1번째 문제 풀이
 // let s = "pPoooyY";
 
-// function solution(s) {pp
+// function solution(s) {
 
 //     let d = s.toLowerCase(); // 소문자로 변환;
 //     let pl = d.match(/p/g).length; //p의 갯수 가져오기
@@ -25,11 +25,8 @@ let s = "pPoooyY";
     let check_y = change.split("y").length;
     
    result = check_p == check_y ? true : false;
-
-
   console.log(change.split("p"));
  
-
 //모법예시
 //논리연산자를 바로 구현해서 return값에 전달
 function numPY(s){
