@@ -13,7 +13,6 @@ function solution(num) {
      answer = -1; // 500번을 실행했지만 return된 값이 없는 경우
 }
 
-//다른풀이
 
 function solution(num) {
     var count = 0;
