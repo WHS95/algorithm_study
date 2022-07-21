@@ -27,6 +27,7 @@ function solution(arr, divisor) {
 //filter 매소드를 사용해서 진행한 풀이
 
 function solution(arr, divisor) {
-    var answer = arr.filter(v => v%divisor == 0);//??
+    var answer = arr.filter(v => v%divisor == 0);
+    //배열에 있는값을 divisor로 나누었을때 딱 떨어지면 0이기에 이때 true인값만 배열에 남기겠다.
     return answer.length == 0 ? [-1] : answer.sort((a,b) => a-b);
 }

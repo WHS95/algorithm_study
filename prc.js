@@ -1,11 +1,12 @@
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
-const arr3 = [7, 8, 9];
-const newArr = [
-  ...arr1,
-  ...arr2,
-  ...arr3
-];
-
-
-console.log(newArr)
+function solution(n) {
+  
+    let arr = n.toString().split("").reverse(); //[ '5', '4', '3', '2', '1' ]
+    let numarr = n.toString().split("").reverse().map(Number);
+    let sum = numarr.reduce((a, b) => a + b); //15
+  
+    let arr1 = arr.join("+"); //5+4+3+2+1
+    let result = `${arr1}=${sum}`;
+    return result
+  }
+  console.log(solution(12345));
+  

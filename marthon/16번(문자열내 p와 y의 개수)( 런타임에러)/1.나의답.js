@@ -22,6 +22,7 @@
 let s = "pPoooyY";
     let change = s.toLowerCase();
     let check_p = change.split("p").length;
+    //p값을 기준으로 나누어서 문자열에서 특정문자의 개수를 구할수있다.
     let check_y = change.split("y").length;
     
    result = check_p == check_y ? true : false;

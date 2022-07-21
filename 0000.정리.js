@@ -6,6 +6,12 @@ slice()
 split()
 정규식또한 고려가능
 
+//slice 예시-----------------------------------------------
+const arr = ['a', 'b', 'c', 'd'];
+const arr1 = arr.slice(1, 3); // [ 'b', 'c' ]
+const arr2 = arr.slice(1); // ['b', 'c', 'd']
+const arr3 = arr.slice(-3, -1); // ['b', 'c'] 
+
 //substr과 substring의 차이점-----------------------------------------------
 let c = 'asdef'
 console.log(c.substring(0,1))//a

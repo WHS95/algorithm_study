@@ -11,3 +11,12 @@ function solution(n) {
   //join('')배열 구분자인,을 지우고 구현
   return result;
 }
+
+//다른사람 풀이
+function waterMelon(n){
+  var result = "";
+for(var i=1; i<=n; i++) {
+  i % 2 === 1 ? result += "수" : result += "박"
+}
+return result;
+}

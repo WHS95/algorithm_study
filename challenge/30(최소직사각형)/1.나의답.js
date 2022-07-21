@@ -19,6 +19,23 @@ function solution(sizes) {
 
 //다른사람의 답안
 function solution(sizes) {
+  // 가로,세로 상관없이 큰값을 a ,작은값을 b
+  // a 중 가장큰값을 고르고 b중 가장큰값을 구해서
+  // a*b를 해준다
+  var a = []; //길이 긴것들 모음
+  var b = []; //길이 짧은것들 모음
+  for (i = 0; i < sizes.length; i++) {
+    a.push(Math.max(sizes[i][0], sizes[i][1]));
+    b.push(Math.min(sizes[i][0], sizes[i][1]));
+  }
+  answer =
+    a.reduce((a, b) => (a > b ? a : b)) * b.reduce((a, b) => (a > b ? a : b));
+
+  return answer;
+}
+
+//다른사람의 답안
+function solution(sizes) {
   const rotated = sizes.map(([w, h]) => (w < h ? [h, w] : [w, h]));
 
   let maxSize = [0, 0];

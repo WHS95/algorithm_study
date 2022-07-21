@@ -7,13 +7,15 @@ function solution(numbers) {
       if (i != j) result.push(numbers[i] + numbers[j]);
     }
     //인덱스별로 덧셈
+    0,1/0,2/1,2
   }
   answer = result.sort((a, b) => a - b);
   //데이터 오름차순으로 정리
   for (i = 0; i < answer.length; i++) {
     if (answer[i] !== answer[i + 1]) final.push(answer[i]);
   }
-  //중복 값들 제거
+  //인덱스 별로 덧셈시 중복 값발생
+  //각자의 값끼리 비교해서  중복되지 않는값들만 입력
   return final;
 }
 

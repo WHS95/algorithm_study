@@ -14,11 +14,13 @@ function solution(answers) {
     }
     //학생들이 맞힌 갯수를 배열화 함
     let testresult = [count_a, count_b, count_c];
+
   
     const end = [];
     const maxValue = Math.max(...testresult);
     //가장 많이 맞히 갯수를 파악
     let index = 0;
+    //testresult->[5,5,5]
     for (let i = 0; i < 3; i++) {
       if (maxValue === testresult[i]) {
         //학생들이 맞힌갯수와 최대 정답갯수가 같으면 값이 입력
