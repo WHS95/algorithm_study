@@ -104,6 +104,7 @@ let firstNumbers = [1, 2, 3];
 let secondNumbers = [4, 5, 6];
 let merged = firstNumbers.concat(secondNumbers);
 console.log(merged); // [1, 2, 3, 4, 5, 6]
+
 //전게연산자(...arr)(spread operator)
 const arr1 = [1, 2, 3];
 const arr2 = [4, 5, 6];
@@ -114,6 +115,7 @@ const newArr = [
   ...arr2,
   ...arr3
 ];//1,2,3,4,5,6,7,8,9
+
 //push사용
 const arr1 = [1, 2, 3];
 const arr2 = [4, 5, 6];

@@ -14,6 +14,19 @@ function solution(strings, n) {
   return answer;
 }
 
+
+let answer = stirngs.srot((a,b)=>{
+  if(a[n]>b[n]) return 1;
+  if(a[n]<b[n]) return -1;
+  if(a[n] === b[n]){
+    if(a<b) return 1;
+    if(a>b) return 1;
+    return 0;
+  }
+
+})
+
+
 //문자열비교
 //문자열 오름차순
 //문자열 내림차순
