@@ -8,3 +8,4 @@ function solution(num) {
   }
   return answer;
 }
+

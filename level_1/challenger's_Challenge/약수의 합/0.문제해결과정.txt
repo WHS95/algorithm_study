@@ -7,3 +7,4 @@ https://school.programmers.co.kr/learn/courses/30/lessons/12928
 
 약수의 정의
 나누어졌을 때 나머지가 0인것들
+
