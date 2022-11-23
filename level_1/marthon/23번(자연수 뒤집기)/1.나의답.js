@@ -4,6 +4,7 @@ function solution(n) {
   //문자열을 배열로
   let chg = (a) => Number(a);
   let numarr = arr.map(chg);
+  ['1', '2', '3'].map(Number)
   //문자열 배열을 숫자열로
   numarr.sort((a, b) => b - a);
   //배열을 내림차순으로 sort

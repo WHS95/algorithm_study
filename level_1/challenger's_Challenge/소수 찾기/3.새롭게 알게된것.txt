@@ -16,3 +16,9 @@ console.log(array1.fill(6));
 
 
 알고리즘인 에라토스테네스의 체 공식에대해 공부하는 계기가되었음
+
+
+https://rebro.kr/46
+https://mine-it-record.tistory.com/507
+https://junkim.netlify.app/posts/programmers0807
+
