@@ -1,0 +1,5 @@
+문제링크
+https://school.programmers.co.kr/learn/courses/30/lessons/42862
+
+
+//reverse에 있은변수는 +-1만 가능

@@ -13,7 +13,7 @@ function solution(n) {
   }
   return result;
 }
-//시간초과... 내가봐도 효율서이 없다..
+//시간초과... 내가봐도 효율성이 없다..
 
 //에라토스 체라는 소수를 구하는 방식의 적용하여 해결
 function solution(n) {
