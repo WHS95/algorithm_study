@@ -1,38 +1,36 @@
-const n = 10;
-const lost = [4, 2];
-const reserve = [3, 5];
-
 function solution(n, lost, reserve) {
-  //본질은 다빌려주었을때 lost가 몇명인가!!
-  let arr = [];
-  for (let i = 0; i < n; i++) {
-    arr[i + 1];
-  }
+  // 처음 가능한 학생수 = 전체 학생수 - 체육복 분실한 학생 수
+  var answer = n-lost.length;
+  
+  //여분의 옷이 없이 정말 분실한 학생
+  let realLost=lost.filter((l)=>!reserve.includes(l));
+  //여분의 옷이 정말 있는 학생
+  let realReserve=reserve.filter((r)=>!lost.includes(r));
+  //분실을  당했지만 여분의 옷이 있어 수업가능해진 학셍
+  answer+=lost.length-realLost.length;
+  
+  //lost 배열 앞뒤의 값을 reserve에 포함되어있는지를 확인 -> 해당값을 reserve에서 뺌 + answer+
+  //정렬 이유 - [4,2], [3,5]와 같은 케이스 때문
+  realLost.sort((a,b)=>a-b);
 
-  //여벌옷을 가져온 아이들
-  let moreClothStudent = reserve;
-
-  //잃어버린 아이들
-  let lostStudent = lost.sort((a, b) => a - b);
-
-  //여벌옷 가져온 친구중 도난을 당한경우
-  const realReserve = moreClothStudent.filter((x) => !lostStudent.includes(x));
-  //[ 3, 5 ]
-
-  //여벌옷 가져온 친구들중 아직 안빌려준 친구들에게서 1을 뺴서 만들기
-  const addReverse = realReserve.map((e) => e - 1); //[2,4,6]
-  const fristLostStudent = lostStudent.filter((x) => !addReverse.includes(x));
-  const leftReverseStudent = addReverse.filter((x) => !lostStudent.includes(x));
-
-  //여벌옷 가져온 친구들 1을 더해서 만들기
-  const minusReverse = leftReverseStudent.map((e) => e + 2); //[ 4 ]
-  const SecondLostStudent = fristLostStudent.filter(
-    (x) => !minusReverse.includes(x)
-  );
-  console.log(fristLostStudent);
-  let LostStudentCount = SecondLostStudent.length;
-  //결과값 = 전체 학생들 - 최종적으로 못빌린 아이들의 숫자
-  return (result = n - LostStudentCount);
+  //문제의 조건 로직
+  realLost.forEach((l)=>{
+      //정말로 여분의 옷이 있는 학생이 한먕도 없는경우
+      if(realReserve.length===0){
+          return;
+      }
+      
+      //여분의 옷을 가진 학생 -1
+      if(realReserve.includes(l-1)){
+          realReserve=realReserve.filter((r)=>r!==l-1);
+          answer++;
+      }
+      //여분의 옷을 가진 학생 +1
+      else if(realReserve.includes(l+1)){
+          realReserve=realReserve.filter((r)=>r!==l+1);
+          answer++;
+      }
+      
+  })
+  return answer;
 }
-
-console.log(solution(n, lost, reserve));

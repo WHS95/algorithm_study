@@ -1,0 +1,5 @@
+  let C=A.filter((l)=>!B.includes(l));
+
+  여기서 C는 A에서 B를 뺸 차집합이다.
+
+  https://88240.tistory.com/519
