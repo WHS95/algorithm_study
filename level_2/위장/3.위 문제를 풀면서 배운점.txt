@@ -1,0 +1,34 @@
+₩₩합 순열에 대한 개념들에 대해서 다시 공부하게되었다.
+(대학교 이후 오랜만에 해서 다까먹었다...)
+조합:순서를 고려하지 않은 조합
+순열:순서를 고려한 조합
+
+
+
+₩₩객체를 배열 처럼다루는 법들에 대해서 다시 복습을 할 수있었다.
+Object.values
+Object.keys
+https://velog.io/@lilyoh/js-object-%EC%9A%94%EC%86%8C%EC%97%90-%EC%A0%91%EA%B7%BC%ED%95%98%EA%B3%A0-%EC%88%9C%ED%9A%8C%ED%95%98%EA%B8%B0
+
+const keys = Object.keys(obj) // ['name', 'weight', 'price', 'isFresh']
+
+for (let i = 0; i < keys.length; i++) {
+  const key = keys[i] // 각각의 키
+  const value = obj[key] // 각각의 키에 해당하는 각각의 값
+
+  console.log(value)
+}
+
+₩₩js map함수 한번더 복습
+https://www.freecodecamp.org/korean/news/javascript-map-method/
+let arr = [2, 3, 5, 7]
+
+arr.map(function(element, index, array){
+	console.log(this) // 80
+}, 80);
+
+
+
+₩₩재귀 함수를 이용하여 팩토리얼 함수를 만들어보았다.
+
+₩₩조합 함수를 만들어보았다.

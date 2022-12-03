@@ -16,10 +16,10 @@ function solution(clothes) {
   var answer = 1;
   var obj = {};
   for (var i = 0; i < clothes.length; i++) {
-    obj[clothes[i][1]] = (obj[clothes[i][1]] || 0) + 1;
+    obj[clothes[i][1]] = (obj[clothes[i][1]] || 1) + 1;
   }
   // 빈 객체(obj)를 생성한다.
-  
+
   // clothes 배열을 돌면서 의상의 종류를 key로,
   // 의상 종류에 포함되는 옷의 개수를 value로 하는 프로퍼티를 obj에 할당한다.
 
