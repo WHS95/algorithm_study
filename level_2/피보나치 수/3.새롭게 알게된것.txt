@@ -1,2 +1,35 @@
 
+1)자바스크립트에서 보장하는 최대정수값 
+console.log(Number.MAX_SAFE_INTEGER); //자바스크립트에서 보장하는 최대 정수값 9007199254740991
+console.log(Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2); //true
 
+
+2)메모라이저 고차함수 
+
+memoizer라는 고차 함수
+memoizer라고 불리는 새로운 함수를 만들어 fun 함수를 받아들여 매개변수로 기억합니다. 
+함수 내에서 나중에 사용할 수 있도록 함수 실행 결과를 저장하기 위한 cache 오브젝트를 생성
+
+function memoizer(fun){
+    let cache = {}
+    return function (n){
+        if (cache[n] != undefined ) {
+          return cache[n]
+        } else {
+          let result = fun(n)
+          cache[n] = result
+          return result
+        }
+    }
+}
+
+
+3)함수를 메모화(memoize) 할 때 좋은 경우
+
+물론 메모이제이션은 놀랍고 이제 모든 함수를 메모화(memoize)하고 싶을 수도 있습니다. 
+그것은 매우 비생산적 일 수 있습니다. 다음은 메모이제이션이 도움이되는 네 가지 경우입니다.
+
+비싼 함수 호출, 즉 무거운 계산을 수행하는 함수
+캐시된 값이 (그저 거기에 앉아) 아무것도 하지 않는 것처럼 제한적이고 매우 반복적 인 입력 범위를 가진 함수의 경우.
+반복 입력 값이 있는 재귀 함수의 경우.
+순수한 함수, 즉 특정 입력으로 호출 될 때마다 동일한 출력을 반환하는 함수의 경우.
